@@ -52,29 +52,29 @@ if(input_type== "option_1"){
     cin>>Sec_long_2;
 
     if(Hemi_lat_1=='N'){
-        lat_1= Deg_lat_1+(Min_lat_1/60)+(Sec_lat_1/3600);
+        lat_1= Deg_lat_1+(Min_lat_1/60.0)+(Sec_lat_1/3600.0);
     }
     else if(Hemi_lat_1=='S'){
-        lat_1= -1 * (Deg_lat_1+(Min_lat_1/60)+(Sec_lat_1/3600));
+        lat_1= -1 * (Deg_lat_1+(Min_lat_1/60.0)+(Sec_lat_1/3600.0));
     }
     if(Hemi_lat_2=='N'){
-        lat_2= Deg_lat_2+(Min_lat_2/60)+(Sec_lat_2/3600);
+        lat_2= Deg_lat_2+(Min_lat_2/60.0)+(Sec_lat_2/3600.0);
     }
     else if(Hemi_lat_2=='S'){
-        lat_2= -1 * (Deg_lat_2+(Min_lat_2/60)+(Sec_lat_2/3600));
+        lat_2= -1 * (Deg_lat_2+(Min_lat_2/60.0)+(Sec_lat_2/3600.0));
     }
 
     if(Hemi_long_1=='E'){
-        long_1= Deg_long_1+(Min_long_1/60)+(Sec_long_1/3600);
+        long_1= Deg_long_1+(Min_long_1/60.0)+(Sec_long_1/3600.0);
     }
     else if(Hemi_long_1=='W'){
-        long_1= -1 * (Deg_long_1+(Min_long_1/60)+(Sec_long_1/3600));
+        long_1= -1 * (Deg_long_1+(Min_long_1/60.0)+(Sec_long_1/3600.0));
     }
     if(Hemi_long_2=='E'){
-        long_2= Deg_long_2+(Min_long_2/60)+(Sec_long_2/3600);
+        long_2= Deg_long_2+(Min_long_2/60.0)+(Sec_long_2/3600.0);
     }
     else if(Hemi_long_2=='W'){
-        long_2= -1 * (Deg_long_2+(Min_long_2/60)+(Sec_long_2/3600));
+        long_2= -1 * (Deg_long_2+(Min_long_2/60.0)+(Sec_long_2/3600.0));
     }
     lat_1=lat_1*pi_processed;
     long_1=long_1*pi_processed;
@@ -88,8 +88,8 @@ if(input_type== "option_1"){
     temp_1 = pow(temp_1,2);
     temp_2 = pow(temp_2,2);
 
-    temp_3=temp_1+cos(lat_1)* cos(lat_2)*temp_2;
-    output=2*radius_of_earth+ asin(sqrt(temp_3));
+    temp_3=temp_1+cos(lat_1) * cos(lat_2)*temp_2;
+    output=2*radius_of_earth * asin(sqrt(temp_3));
     cout<<"The distance between is "<<output<<" Km";
 
 }
@@ -116,8 +116,8 @@ lat_1=lat_1*pi_processed;
     temp_1 = pow(temp_1,2);
     temp_2 = pow(temp_2,2);
 
-    temp_3=temp_1+cos(lat_1)* cos(lat_2)*temp_2;
-    output=2*radius_of_earth+ asin(sqrt(temp_3));
+    temp_3=temp_1+cos(lat_1) * cos(lat_2)*temp_2;
+    output=2*radius_of_earth * asin(sqrt(temp_3));
     cout<<"The distance between is "<<output<<" Km";}
 
 return 0;
